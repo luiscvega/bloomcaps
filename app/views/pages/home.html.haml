@@ -1,3 +1,18 @@
 .hero-unit
   %h1#title Bloomcaps
   %p Bloomcaps are beautiful flower designs made from recycled materials such as used medicine bottle caps. These designs are then used to decorate a whole variety of everyday objects, such as magnets and ID card rollers.
+  %p= link_to "Choose Your Favorite!", "#", class: "btn primary"
+  
+%ul.media-grid
+  %li
+    %a{:href => "#"}
+      = image_tag "flower280x150.jpg", class: "thumbnail"
+      %h6 Flower with ID Roller
+  %li
+    %a{:href => "#"}
+      = image_tag "flower280x150.jpg", class: "thumbnail"
+      %h6 Flower Magnets
+  %li
+    %a{:href => "#"}
+      = image_tag "flower280x150.jpg", class: "thumbnail"
+      %h6 Lorem ipsum
