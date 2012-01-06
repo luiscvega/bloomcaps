@@ -2,7 +2,7 @@
 %ul.items
   - @small_items.each do |item|
     %li
-      %h1= item.name
+      %h2= item.name
       = link_to(image_tag("s#{item.image}.jpg"), "#", width: "200px")
       %p.description= item.description.capitalize
       = form_tag cart_items_url do
@@ -14,15 +14,18 @@
 
 .clear
 
+%hr 
+
 %h1 Big Bloomcaps
 %ul.items
   - @big_items.each do |item|
     %li
-      %h1= item.name
+      %h2= item.name
       = image_tag "b#{item.image}.jpg", width: "200px"
       %p.description= item.description.capitalize
       = form_tag cart_items_url do
         = submit_tag "Select", class: "btn"
         = hidden_field_tag :item, item.id
-        Qty:
-        = number_field_tag :quantity, 1
+        %span{:style => "float: right;"}
+          Qty:
+          = number_field_tag :quantity, 1
