@@ -1,6 +1,7 @@
-- @items.each do |item|
-  %ul.items
+%ul.items
+  - @items.each do |item|
     %li
       %h1= item.name
-      %p= item.description
       = image_tag "#{item.image}.jpg", width: "200px"
+      %p.description= item.description
+      = link_to "Buy", "#", class: "btn"
