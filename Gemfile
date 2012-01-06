@@ -7,6 +7,9 @@ gem 'rails', '3.1.3'
 
 gem 'haml'
 
+gem 'paperclip'
+gem 'aws-s3'
+
 group :development do 
   gem 'haml-rails'
   gem 'sqlite3'  

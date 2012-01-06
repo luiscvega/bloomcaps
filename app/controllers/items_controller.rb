@@ -4,4 +4,13 @@ class ItemsController < ApplicationController
     @big_items = Item.where(size: "big")
     @cart_item = cart.cart_items.new
   end
+  
+  def new
+    @item = Item.new
+  end
+  
+  def create
+    Item.create(params[:item])
+    redirect_to items_url
+  end
 end

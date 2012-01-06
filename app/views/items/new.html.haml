@@ -1,0 +1,13 @@
+%h1 New Page
+
+= form_for(@item) do |f|
+  %br
+  = f.label :name
+  = f.text_field :name
+  %br
+  = f.label :size
+  = f.text_field :size
+  %br
+  = f.file_field :photo
+  %br
+  = f.submit "Create Item", class: "btn primary"
