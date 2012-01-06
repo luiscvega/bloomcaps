@@ -3,10 +3,10 @@ Bloomcaps::Application.routes.draw do
   root to: "pages#home"
 
   get "pages/home", as: "root"
-
   get "pages/about", as: "about"
-
   get "pages/contact", as: "contact"
+  
+  resources :items
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
