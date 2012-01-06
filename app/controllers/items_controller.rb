@@ -13,4 +13,10 @@ class ItemsController < ApplicationController
     Item.create(params[:item])
     redirect_to items_url
   end
+  
+  def destroy
+    @item = Item.find(params[:id])
+    @item.destroy
+    redirect_to items_url
+  end
 end
