@@ -8,8 +8,8 @@ ul.items {
     width: 200px;
     list-style-type: none;
     float: left;
-    padding: 8px;
-    margin: 5px;
+    padding: 8px 8px 8px 8px;
+    margin: 5px 5px 15px 5px;
     border: 1px solid #ddd;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -24,8 +24,16 @@ ul.items {
     
     .description {
       display: block;
-      height: 2.5em;
+      height: 3.5em;
       padding: 5px;
+    }
+    input#quantity {
+      width: 30px;
+    }
+  
+    
+    form {
+      margin: 5 15px;
     }
   }
 }

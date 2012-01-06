@@ -1,0 +1,4 @@
+%h1= cart.id
+%h1= @items.count
+- @items.each do |items|
+  %p= items.name

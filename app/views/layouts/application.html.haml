@@ -15,8 +15,9 @@
           %h3{:style => "font-family: Alex Brush; top: 3px;"}
             = link_to "Bloomcaps", root_url
           %ul
-            %li= link_to "Home", root_url
+            %li= link_to "Choose", items_url
             %li= link_to "About", about_url
             %li= link_to "Contact", contact_url
+            %li= link_to "My Shopping Cart (#{cart.cart_items.count})", cart_url(cart)
     .container
       = yield

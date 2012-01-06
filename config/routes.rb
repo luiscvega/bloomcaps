@@ -7,6 +7,8 @@ Bloomcaps::Application.routes.draw do
   get "pages/contact", as: "contact"
   
   resources :items
+  resources :carts
+  resources :cart_items
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
