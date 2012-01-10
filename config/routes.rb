@@ -6,6 +6,8 @@ Bloomcaps::Application.routes.draw do
   get "pages/about", as: "about"
   get "pages/contact", as: "contact"
   
+  get "carts/processed", as: "processed"
+  
   resources :items
   resources :carts
   resources :cart_items
