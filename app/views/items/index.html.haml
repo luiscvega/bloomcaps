@@ -5,6 +5,8 @@
       %h2= item.name
       = item.photo.url != "/photos/original/missing.png" ? image_tag(item.photo.url, width: "200px") : image_tag("b#{item.image}.jpg", width: "200px")
       %p.description= item.description.capitalize
+      .price
+        $ #{item.price}.00
       = form_tag cart_items_url do
         = submit_tag "Select", class: "btn"
         = hidden_field_tag :item, item.id
@@ -24,6 +26,8 @@
       %h2= item.name
       = item.photo.url != "/photos/original/missing.png" ? image_tag(item.photo.url, width: "200px") : image_tag("s#{item.image}.jpg", width: "200px")
       %p.description= item.description.capitalize
+      .price
+        $ #{item.price}.00
       = form_tag cart_items_url do
         = submit_tag "Select", class: "btn"
         = hidden_field_tag :item, item.id
