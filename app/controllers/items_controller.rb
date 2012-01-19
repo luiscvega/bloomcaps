@@ -1,4 +1,7 @@
 class ItemsController < ApplicationController
+  
+  before_filter :authenticate_user!, only: [:new, :create, :destroy]
+  
   def index
     @small_items = Item.where(size: "small")
     @big_items = Item.where(size: "big")
