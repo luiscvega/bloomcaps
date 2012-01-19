@@ -13,8 +13,9 @@
         %span{:style => "float: right;"}
           Qty:
           = number_field_tag :quantity, 1
-      .delete
-        = link_to("Delete", item_url(item), method: :delete) if user_signed_in?
+      - if user_signed_in?
+        .delete
+          = link_to("Delete", item_url(item), method: :delete)
 
 .clear
 
@@ -35,5 +36,6 @@
         %span{:style => "float: right;"}
           Qty:
           = number_field_tag :quantity, 1
-      .delete
-        = link_to("Delete", item_url(item), method: :delete) if user_signed_in?
+      - if user_signed_in?
+        .delete
+          = link_to("Delete", item_url(item), method: :delete)
