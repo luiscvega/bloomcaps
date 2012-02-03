@@ -8,7 +8,7 @@
       .price
         $ #{item.price}.00
       = form_tag cart_items_url do
-        = submit_tag "Select", class: "btn"
+        = submit_tag "Add to Cart", class: "btn add_to_cart"
         = hidden_field_tag :item, item.id
         %span{:style => "float: right;"}
           Qty:
@@ -31,7 +31,7 @@
       .price
         $ #{item.price}.00
       = form_tag cart_items_url do
-        = submit_tag "Select", class: "btn"
+        = submit_tag "Add to Cart", class: "btn"
         = hidden_field_tag :item, item.id
         %span{:style => "float: right;"}
           Qty:
