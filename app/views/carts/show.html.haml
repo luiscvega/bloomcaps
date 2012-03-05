@@ -1,9 +1,16 @@
-/%h1= cart.id
-/ %h1= @items.count
-/- @items.each do |items|
-/  %p= items.name
+%h2 Your Cart has #{pluralize(cart.items.count, "item")}.
 
+%br 
 
+%table.table
+  %thead
+    %tr
+      %th Name
+  %tbody
+  - cart.items.each do |item|
+    %tr
+      %td= item.name
+      %td= item.photo.url != "/photos/original/missing.png" ? image_tag(item.photo.url, width: "200px") : image_tag("b#{item.image}.jpg", width: "80px")
+  
 
-= render Samurai::Rails::Views.errors
-= render Samurai::Rails::Views.payment_form :redirect_url => processed_url
+= link_to "Checkout", checkout_url

@@ -10,6 +10,8 @@ Bloomcaps::Application.routes.draw do
   
   get "carts/processed", as: "processed"
   
+  get "carts/checkout", as: "checkout"
+  
   resources :items
   resources :carts
   resources :cart_items

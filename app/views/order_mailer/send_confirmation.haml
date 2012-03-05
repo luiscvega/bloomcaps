@@ -1,0 +1,4 @@
+%h1 "Your order is being processed!"
+
+- @cart.items.each do |items|
+  %p= items.name
